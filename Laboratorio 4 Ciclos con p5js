@@ -1,0 +1,64 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  //color de la pantalla color grid
+  background(220);
+  //araña hecha con 2 ellipses y 6 lineas las cuales se mueven junto al movimiento del mouse
+  ellipse(mouseX,mouseY-30,30,30);
+  ellipse(mouseX,mouseY,50,50);
+  line(mouseX+25,mouseY,mouseX+40,mouseY);
+  line(mouseX+24,mouseY-5,mouseX+40,mouseY-5);
+  line(mouseX+24,mouseY+5,mouseX+40,mouseY+5);
+  line(mouseX-25,mouseY,mouseX-40,mouseY);
+  line(mouseX-24,mouseY-5,mouseX-40,mouseY-5);
+  line(mouseX-24,mouseY+5,mouseX-40,mouseY+5);
+  //telarañaX hecha de lineas la cual un extremo esta en la parte inferior de la pantalla y la otra en la cola de la araña
+  line(0,400,mouseX,mouseY+24);
+  line(50,400,mouseX,mouseY+24);
+  line(100,400,mouseX,mouseY+24);
+  line(150,400,mouseX,mouseY+24);
+  line(200,400,mouseX,mouseY+24);
+  line(250,400,mouseX,mouseY+24);
+  line(300,400,mouseX,mouseY+24);
+  line(350,400,mouseX,mouseY+24);
+  line(400,400,mouseX,mouseY+24);
+  //TelarañaY hecha de lineas la cual un extremo esta en los muros de la pantalla y la otra en la cola de la araña
+  line(0,350,mouseX,mouseY+24);
+  line(0,300,mouseX,mouseY+24);
+  line(0,350,mouseX,mouseY+24);
+  line(0,400,mouseX,mouseY+24);
+  line(400,350,mouseX,mouseY+24);
+  line(400,300,mouseX,mouseY+24);
+  //mosca hecha con el ciclo while la cual le da la forma de pastilla
+  let num = 5;
+  while (num > 0) {
+    num = num - 1;
+    fill(0);
+    ellipse(mouseX,num+20,10,10);
+    print("contador de while",num);
+  }
+  //moscas pequeñas hechas con el ciclo for la cual le da la forma de pastilla
+  for(var i=1;i<5;i++){
+  text(i,10,20,30,40);
+  text(i,30,40,50,60);
+  text(i,30,20,30,40);
+  text(i,10,40,50,60);
+  text(i,60,20,30,40);
+  text(i,60,40,50,60);
+  text(i,80,20,30,40);
+  text(i,80,40,50,60);
+  text(i,100,20,30,40);
+  text(i,100,40,50,60);
+  text(i,300,20,30,40);
+  text(i,300,40,50,60);
+  text(i,330,20,30,40);
+  text(i,330,40,50,60);
+  text(i,360,20,30,40);
+  text(i,360,40,50,60);
+  text(i,250,20,30,40);
+  text(i,250,40,50,60);
+  print("contador for: "+i);
+  }
+}
